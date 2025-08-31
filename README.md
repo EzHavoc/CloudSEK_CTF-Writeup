@@ -1,87 +1,97 @@
-# CloudSEK_CTF-Writeup
-Absolutely ✅ A **professional and polished README.md** will make your repo stand out. Here’s a draft tailored for your CloudSEK Hiring CTF writeup repo:
+Got it ✅ — right now your README is solid in content but the **routing/structure/navigation** can definitely be improved for readability and quick access.
+I’ll reorganize it with a **cleaner flow, clickable links, consistent headings, and better visual hierarchy**.
+
+Here’s an updated version:
 
 ---
 
-# 🕵️ CloudSEK Hiring CTF Writeup
+# 🕵️ CloudSEK Hiring CTF — Writeup
 
-Hello Dear Reader, my name is **ZestyPesky** and this is my detailed write-up for the **CloudSEK Hiring CTF**.
+Hello! I’m **ZestyPesky** and this repository contains my detailed write-up for the **CloudSEK Hiring CTF**.
 
-I managed to solve **4 out of 5 flags within the time limit**, and even discovered the **5th flag** after the event had ended.
-This repository documents my **step-by-step solutions, methodology, and thought process** behind each challenge.
+I managed to solve **4 out of 5 flags during the event** and later cracked the **final challenge (Flag 5)** after the CTF ended.
+This repo documents my **approach, methodology, and key learnings** from each stage.
 
 ---
 
-## 📑 Table of Contents
+## 📚 Navigation
 
-* [Overview](#Overview)
-* [Challenges](#Challenges)
+* [🔎 Overview](#-overview)
+* [🚩 Challenges](#-challenges)
 
-  * [Welcome Challenge – Flag 1](#welcome-challenge--flag-1)
-  * [Hacking the Hacker – Flag 2](#hacking-the-hacker--flag-2)
-  * [Attacking the Infrastructure – Flag 3](#attacking-the-infrastructure--flag-3)
-  * [Bypassing Authentication – Flag 4](#bypassing-authentication--flag-4)
-  * [The Final Game – Flag 5](#the-final-game--flag-5)
-* [Key Takeaways](#key-takeaways)
-* [Disclaimer](#disclaimer)
+  * [Flag 1 — Welcome Challenge](#flag-1--welcome-challenge)
+  * [Flag 2 — Hacking the Hacker](#flag-2--hacking-the-hacker)
+  * [Flag 3 — Attacking the Infrastructure](#flag-3--attacking-the-infrastructure)
+  * [Flag 4 — Bypassing Authentication](#flag-4--bypassing-authentication)
+  * [Flag 5 — The Final Game](#flag-5--the-final-game)
+* [📌 Key Takeaways](#-key-takeaways)
+* [⚠️ Disclaimer](#-disclaimer)
 
 ---
 
 ## 🔎 Overview
 
-The **CloudSEK Hiring CTF** was designed to test candidates on real-world cybersecurity challenges, ranging from **OSINT and prompt injection** to **GraphQL exploitation, authentication bypass, and AWS SSRF attacks**.
+The **CloudSEK Hiring CTF** tested a wide spectrum of skills — from **OSINT, prompt injection, and reverse engineering** to **GraphQL exploitation, authentication bypass, and AWS SSRF attacks**.
 
-It was an incredibly fun and challenging experience that tested both **technical skills** and **time management under pressure**.
+It was a mix of real-world security scenarios and fun puzzles that tested both **technical depth** and **time management**.
 
 ---
 
 ## 🚩 Challenges
 
-### Welcome Challenge – Flag 1
+### Flag 1 — Welcome Challenge
 
-* OSINT investigation using email address.
-* Repository commit analysis.
-* Discovered the first real flag hidden in an older commit.
+* OSINT using an email address.
+* Commit history analysis in GitHub.
+* Extracted the **first flag** hidden in an older commit.
 
-### Hacking the Hacker – Flag 2
+---
 
-* Telegram bot reverse engineering.
-* Prompt injection to bypass bot restrictions.
-* Audio (Morse code) analysis to retrieve the flag.
+### Flag 2 — Hacking the Hacker
 
-### Attacking the Infrastructure – Flag 3
+* Reverse-engineered a Telegram bot.
+* Used **prompt injection** to bypass restrictions.
+* Analyzed an audio file (Morse code) → **second flag obtained**.
 
-* CloudSEK BeVigil APK analysis.
-* Hardcoded GraphQL endpoint discovery.
-* GraphQL introspection + privilege escalation via JWT forgery.
+---
 
-### Bypassing Authentication – Flag 4
+### Flag 3 — Attacking the Infrastructure
 
-* Leveraged credentials from previous step.
-* Discovered MFA/backup code bypass via **hardcoded API keys**.
-* Session cookie analysis to obtain user ID and generate admin backup codes.
+* Decompiled the **CloudSEK BeVigil APK**.
+* Found a **hardcoded GraphQL endpoint**.
+* Performed introspection → privilege escalation via **JWT forgery**.
 
-### The Final Game – Flag 5 *(Solved after CTF ended)*
+---
 
-* SSRF via profile picture upload API.
-* Exploited AWS metadata service to retrieve IAM credentials.
-* Queried S3 bucket to uncover the final flag.
+### Flag 4 — Bypassing Authentication
+
+* Leveraged GraphQL creds from previous step.
+* Found **hardcoded API keys** enabling MFA/backup code bypass.
+* Analyzed session cookies → generated **admin backup codes**.
+
+---
+
+### Flag 5 — The Final Game *(post-CTF solve)*
+
+* Found **SSRF** in profile picture upload API.
+* Exploited AWS metadata service → obtained IAM creds.
+* Queried S3 bucket to extract the **final flag**.
 
 ---
 
 ## 📌 Key Takeaways
 
-* **OSINT is powerful** – even a small clue can lead to the next flag.
-* **Prompt injection** is a real-world problem in chatbot security.
-* **GraphQL misconfigurations** can lead to privilege escalation.
-* **Hardcoded secrets** in code are dangerous.
-* **SSRF into cloud metadata** can escalate into full cloud account compromise.
+* 🔍 **OSINT can snowball** into bigger breakthroughs.
+* 🤖 **Prompt injection** is a rising concern in chatbot security.
+* 📊 **GraphQL misconfigs** often expose more than intended.
+* 🔑 **Hardcoded secrets** = disaster waiting to happen.
+* ☁️ **SSRF in cloud environments** can escalate into **full account compromise**.
 
 ---
 
 ## ⚠️ Disclaimer
 
-This writeup is strictly for **educational purposes**.
-All vulnerabilities and flags mentioned here are part of the **CloudSEK Hiring CTF challenge** and **do not exist in any production environment**.
+This write-up is for **educational purposes only**.
+All vulnerabilities described exist **only in the CloudSEK Hiring CTF environment**, not in production systems.
 
 ---
