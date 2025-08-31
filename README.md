@@ -1,10 +1,3 @@
-Got it ✅ — right now your README is solid in content but the **routing/structure/navigation** can definitely be improved for readability and quick access.
-I’ll reorganize it with a **cleaner flow, clickable links, consistent headings, and better visual hierarchy**.
-
-Here’s an updated version:
-
----
-
 # 🕵️ CloudSEK Hiring CTF — Writeup
 
 Hello! I’m **ZestyPesky** and this repository contains my detailed write-up for the **CloudSEK Hiring CTF**.
