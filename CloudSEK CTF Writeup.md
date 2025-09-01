@@ -430,7 +430,7 @@ This reminded me that I could try percent encoding for the ip in same fashion as
 
 ![image.png](./assets/images/3a1c8529-deb6-4156-b339-fa166130c9c7.png)
 
-Thus the SSRF had successfully reached the IAM security-credentials path, and the response `@cloudsek-ctf` feels like a role name(which turns out to be a directory) attached to EC2 instance.
+Thus the SSRF had successfully reached the IAM security-credentials path, and the response `@cloudsek-ctf` feels like a role name(which turns out to be the name of EC2 instance) attached to EC2 instance.
 
 `
 curl -i \
